@@ -21,7 +21,7 @@ class adder{
 int main(){
 	adder obj;
 	cout<<"Addition of two integers is "<<obj.add(200,300)<<endl;
-	cout<<"Addition of two strings is "<<obj.add("We","lc","ome")<<endl;
+	cout<<"Addition of three strings is "<<obj.add("We","lc","ome")<<endl;
 	cout<<"Addition of an integer and a float number is "<<obj.add(3,4.14)<<endl;
 	return 0;
 }

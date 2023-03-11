@@ -23,6 +23,10 @@ class Time{
 				second=0;
 				cout<<"\nEntered seconds is invalid";}
 			cout<<"The time now is ";
+			print(hour,minute,second);
+		}
+		
+		void print(int hour,int minute,int second){
 			cout<<setfill('0')<<setw(2)<<hour<<":"<<setw(2)<<minute<<":"<<setw(2)<<second<<endl;
 		}
 		
@@ -39,7 +43,7 @@ class Time{
 				}
 			}
 			cout<<"\nThe pre-incremented Time is ";
-			cout<<setfill('0')<<setw(2)<<hour<<":"<<setw(2)<<minute<<":"<<setw(2)<<second<<endl;
+			print(hour,minute,second);
 		}
 		
 		operator++(int){
@@ -55,7 +59,7 @@ class Time{
 				}
 			}
 			cout<<"\nThe post-incremented Time is ";
-			cout<<setfill('0')<<setw(2)<<hour<<":"<<setw(2)<<minute<<":"<<setw(2)<<second<<endl;
+			print(hour,minute,second);
 		    }
 };
 int main() {
