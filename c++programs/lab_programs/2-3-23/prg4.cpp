@@ -11,7 +11,7 @@ private:
 	string name;
 	float price;
 public:
-	car(int a,string b,float c) : model_number(a),name(b),price(c)	
+	car(int a,string b,float c) : model_number(a),name(b),price(c)	//member initialization
 	{
 		cout<<"\n Car object created and initialized.."<<endl;
 	}

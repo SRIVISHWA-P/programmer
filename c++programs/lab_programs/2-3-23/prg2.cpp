@@ -46,7 +46,7 @@ class Time{
 			print(hour,minute,second);
 		}
 		
-		operator++(int){
+		void operator++(int){
 			second++;
 			if(second==60){
 				second=0;

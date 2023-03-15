@@ -4,20 +4,20 @@ using namespace std;
 
 class str{
  private:
-	string a;
+	string member;
  public:
  	str(string a){
- 		this->a=a;
+ 		this->member=a;
 	 }
  	
  	bool operator==(str s){
- 		string temp_str=s.a;
- 		if(temp_str.length()!=a.length())
+ 		string temp_str=s.member;
+ 		if(temp_str.length()!=member.length())
  		return false;
  		else{
- 			size_t len=s.a.length();
+ 			size_t len=member.length();
  			for(int i=0;i<len;i++){
- 				if(temp_str[i]!=a[i]){
+ 				if(temp_str[i]!=member[i]){
  					return false;
 				 }
 			 }
@@ -27,8 +27,8 @@ class str{
 };
 
 int main(){
-	str a("Vishwa"),b("Vishwa");
-	if(a==b)
+	str o1("Vishwa"),o2("Vishwk");
+	if(o1.operator==(o2))
 		cout<<"The two strings are equal"<<endl;
 	else
 		cout<<"The two strings are not equal"<<endl;
