@@ -16,12 +16,12 @@ li $t0, 2     #$t0=2
 div $s1, $t0   # dividing $s1 by $t0
 mfhi $t3        # moving the remainder value in hi to $t3
 
-beq $t0,$zero, if  # $t0==0, then if else next line
-li $a3, 0x00    # R7($a3)=00
+beq $t3,$zero, if  # $t0==0, then if else next line
+li $a1, 0x00    # R7($a3)=00
 j exit
 
 if:
-li $a3, 0xFF   #$a3=ff  
+li $a1, 0xFF   #$a3=ff  
 
 exit:
 li $v0, 10     #for exit systemcall
