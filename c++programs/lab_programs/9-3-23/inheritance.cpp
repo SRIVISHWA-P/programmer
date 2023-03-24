@@ -19,13 +19,7 @@ class CommunityMember{
 };
 
 class Employee : public CommunityMember{
-	public:
-		Employee(int emp_no,string designation,int sal)
-		 : CommunityMember(emp_no,designation,sal)
-		{
-			cout<<"\nThe employee object created"<<endl;
-		}
-		
+	
 };
 
 class Student : public CommunityMember{
@@ -64,24 +58,12 @@ class Staff : public Employee{
 		}
 };
 
-class Administrator :  public Faculty{
-	public:
-		Administrator(int Admin_no,int salary)
-		 : Faculty(Admin_no,"AdminstratorTeacher",salary)
-		{
-			cout<<"\nThe Administrator object created"<<endl;
-		}	
+class Administrator : public Faculty{
+	
 };
 
-class Teacher: public Faculty{
-	private:
-		int teacher_number;
-		int salary;
-	public:
-		Teacher(int t_no,int salary) : Faculty(t_no,"AdministratorTeacher",salary)
-		{
-			cout<<"\nThe Teacher object created"<<endl;
-		}
+class Teacher : public Faculty{
+	
 };
 
 class AdministratorTeacher : public Administrator,public Teacher
@@ -96,16 +78,6 @@ class AdministratorTeacher : public Administrator,public Teacher
 
 
 int main(){
-	Student s1(2021115109);
-	s1.print();
-
-	Alumnus a1(8888);
-	a1.print();
-	
-	Staff revathi(6765,20000);
-	revathi.print();
-	
-	AdministratorTeacher anto(7654,500000);
-	anto.print();
+	return 0;
 }
 
