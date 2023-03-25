@@ -64,7 +64,7 @@ class Staff : public Employee{
 		}
 };
 
-class Administrator : virtual public Faculty{
+class Administrator :virtual public Faculty{
 	public:
 		Administrator(int Admin_no,int salary)
 		 : Faculty(Admin_no,"AdminstratorTeacher",salary)
@@ -74,9 +74,6 @@ class Administrator : virtual public Faculty{
 };
 
 class Teacher:virtual public Faculty{
-	private:
-		int teacher_number;
-		int salary;
 	public:
 		Teacher(int t_no,int salary) : Faculty(t_no,"AdministratorTeacher",salary)
 		{
@@ -88,10 +85,15 @@ class AdministratorTeacher : public Administrator,public Teacher
 
 {   public:
 		AdministratorTeacher(int ad_no,int salary)
-		 : Administrator(ad_no,salary), Teacher(ad_no,salary)
+		 : Administrator(ad_no,salary), Teacher(ad_no,salary), Faculty(ad_no, "Administratorteacher", salary)
 		{
-			cout<<"\nThe AdministratorTeacher object created object created"<<endl;
+			cout<<"\nThe AdministratorTeacher object created"<<endl;
 		}
+		
+		void dis(){
+		cout<<"ssn value is :"<<ssn;
+	}
+		
 };
 
 
