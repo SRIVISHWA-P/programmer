@@ -3,9 +3,9 @@
 using namespace std;
 class CommunityMember{
 	protected:
-		int id=9;
-		string name="vishwa";
-		int salary=80000;
+		int id;
+		string name;
+		int salary;
 	public:
 		CommunityMember(int a, string b, int c) : id(a), name(b), salary(c) {}
 		
@@ -149,5 +149,6 @@ int main(){
 	for (auto it : BasePtr) 
 		it->show();
 		cout<<"\n\n";
+	
 	return 0;
 }

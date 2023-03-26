@@ -108,5 +108,6 @@ int main(){
 	revathi.print();
 	
 	AdministratorTeacher anto(7654,500000);
-	anto.print();
+    anto.print();
+	return 0;
 }
