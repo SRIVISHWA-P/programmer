@@ -124,31 +124,28 @@ class Staff: public Employee{
     virtual void show(){
         	cout<<"\nThe id of the staff is : "<<st_id<<endl;
         	cout<<"The name of the staff is : "<<st_name<<endl;
-        	cout<<"The salary of the staff is : "<<st_salary<<endl;
-		}
+        	cout<<"The salary of the staff is : "<<st_salary<<endl;}
 };
-
 int main(){
 	
 	vector<CommunityMember*> BasePtr;  //creating a vector of baseclass pointer type
 	
-	Alumnus* alu=new Alumnus(3333,"Pradeep",50000);  
+	Alumnus* alu=new Alumnus(1412,"Surya",200000);  
 	BasePtr.push_back(alu);
 	
-	Student* stu=new Student(5653,"Balaji",0);
+	Student* stu=new Student(8976,"Bharath",0);
 	BasePtr.push_back(stu);
 	
-	Staff* sta=new Staff(7654,"Revathi",80000);
+	Staff* sta=new Staff(4567,"vishal",980000);
 	BasePtr.push_back(sta);
 	
-	AdministratorTeacher* adt=new AdministratorTeacher(3241,"Anto",750000);
+	AdministratorTeacher* adt=new AdministratorTeacher(3987,"anu",800000);
 	BasePtr.push_back(adt);
 	
 	cout<<"The derived class objects of the CommunityMember class was created........."<<endl;
 	
 	for (auto it : BasePtr) 
 		it->show();
-		cout<<"\n\n";
-	
+		cout<<"\n\n";	
 	return 0;
 }
