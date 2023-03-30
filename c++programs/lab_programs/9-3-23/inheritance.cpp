@@ -90,10 +90,6 @@ class AdministratorTeacher : public Administrator,public Teacher
 			cout<<"\nThe AdministratorTeacher object created"<<endl;
 		}
 		
-		void dis(){
-		cout<<"ssn value is :"<<ssn;
-	}
-		
 };
 
 

@@ -219,6 +219,7 @@ int main()
 {
 	Node<int>* root=NULL;
 	int ch=0; int a; bool t;
+	cout<<"AVL Tree operations : "<<endl;
 	display_menu();
 	cin>>ch;
 	while(ch!=8){
@@ -263,6 +264,7 @@ int main()
 				cout<<"\n Invalid choice!!!!!!";		
 		}
 	display_menu();
+	cout<<"\n Enter your choice : ";
 	cin>>ch;
 	}
 }
