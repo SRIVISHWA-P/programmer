@@ -264,7 +264,6 @@ int main()
 				cout<<"\n Invalid choice!!!!!!";		
 		}
 	display_menu();
-	cout<<"\n Enter your choice : ";
 	cin>>ch;
 	}
 }
