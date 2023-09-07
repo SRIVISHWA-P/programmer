@@ -60,5 +60,6 @@ int main(){
     int n;
 	cin>>n;
 	student s1[n];
+	// student y = new student();
 	student::top3(s1);
 }
