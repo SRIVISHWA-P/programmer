@@ -1,29 +1,18 @@
-# set matrix zeros, optimised solution
+# 74. Search a 2D Matrix
 class Solution:
-    def setZeroes(self, matrix: List[List[int]]) -> None:
-        """
-        Do not return anything, modify matrix in-place instead.
-        """
+    def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
         m = len(matrix)
         n = len(matrix[0])
-        col_0_track = 1
-        for i in range(m):
-            for j in range(n):
-                if matrix[i][j] == 0:
-                    matrix[i][0] = 0
-                    if j == 0:
-                        col_0_track = 0
-                    else:
-                        matrix[0][j] = 0
-
-        # This loop is except for first row and first column
-        for i in range(1, m):
-            for j in range(1, n):
-                if matrix[i][0] == 0 or matrix[0][j] == 0:
-                    matrix[i][j] = 0
-        if matrix[0][0] == 0:
-            for j in range(n):
-                matrix[0][j] = 0
-        if col_0_track == 0:
-            for i in range(m):
-                matrix[i][0] = 0
+        low = 0
+        high = (n * m) - 1
+        while low <= high:
+            mid = (low + high) // 2
+            row = mid // n
+            col = mid % n
+            if target == matrix[row][col]:
+                return True
+            elif target > matrix[row][col]:
+                low = mid + 1
+            else:
+                high = mid - 1
+        return False

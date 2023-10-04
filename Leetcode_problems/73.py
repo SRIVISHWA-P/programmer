@@ -1,23 +1,29 @@
-# 73.Sort Colors
+# set matrix zeros, optimised solution
 class Solution:
-    def sortColors(self, nums: List[int]) -> None:
+    def setZeroes(self, matrix: List[List[int]]) -> None:
         """
-        Do not return anything, modify nums in-place instead.
+        Do not return anything, modify matrix in-place instead.
         """
-        # Using Dutch national flag Algorithm
-        low, mid, temp = 0, 0, 0
-        high = len(nums) - 1
-        while mid <= high:
-            if nums[mid] == 0:
-                temp = nums[mid]
-                nums[mid] = nums[low]
-                nums[low] = temp
-                mid += 1
-                low += 1
-            elif nums[mid] == 1:
-                mid += 1
-            elif nums[mid] == 2:
-                temp = nums[mid]
-                nums[mid] = nums[high]
-                nums[high] = temp
-                high -= 1
+        m = len(matrix)
+        n = len(matrix[0])
+        col_0_track = 1
+        for i in range(m):
+            for j in range(n):
+                if matrix[i][j] == 0:
+                    matrix[i][0] = 0
+                    if j == 0:
+                        col_0_track = 0
+                    else:
+                        matrix[0][j] = 0
+
+        # This loop is except for first row and first column
+        for i in range(1, m):
+            for j in range(1, n):
+                if matrix[i][0] == 0 or matrix[0][j] == 0:
+                    matrix[i][j] = 0
+        if matrix[0][0] == 0:
+            for j in range(n):
+                matrix[0][j] = 0
+        if col_0_track == 0:
+            for i in range(m):
+                matrix[i][0] = 0
