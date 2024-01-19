@@ -1,3 +1,5 @@
+//palindrome of a number
+
 import java.util.Scanner;
 
 class Solution {
