@@ -30,3 +30,7 @@ class Solution {
     }
 
 }
+
+// for descending we want to change
+// while(arr[i]<=pivot&&i<high) as while(arr[i]>=pivot&&i<high) and
+// while (arr[j]>pivot&&j>low) as while(arr[j]<pivot&&j>low)
