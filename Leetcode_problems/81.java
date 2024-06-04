@@ -7,7 +7,7 @@ class Solution {
             int mid = (low+high)/2;
             if(nums[mid] == target)
                 return true;
-            if(nums[low]==nums[mid] && nums[mid]==nums[high]){ // only condition to change in repeated elements
+            if(nums[low] == nums[mid] && nums[mid] == nums[high]){ // only condition to change in repeated elements
                 high--;
                 low++;
                 continue;
